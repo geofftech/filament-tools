@@ -1,0 +1,19 @@
+{
+  "name": "geofftech/filament-tools",
+  "type": "library",
+  "require": {
+    "filament/filament": "^3.2"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "GeoffTech\\FilamentTools\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Geoff",
+      "email": "geoff@geofftech.com"
+    }
+  ]
+}
