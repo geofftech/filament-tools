@@ -7,7 +7,7 @@ use GeoffTech\FilamentTools\Helpers\FilamentFormHelper;
 
 class SelectForeignKey
 {
-  public static function make($name, $model, $linkForm)
+  public static function make($name, $model, $form, $linkForm)
   {
     return Select::make($name)
       ->required()
