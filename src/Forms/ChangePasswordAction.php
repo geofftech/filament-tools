@@ -35,6 +35,10 @@ class ChangePasswordAction extends Action
       ->action(function (array $data): void {
 
         $user = Auth::user();
+
+        if (!$user)
+          return;
+
         $user->password = $data['password'];
         $user->save();
 
