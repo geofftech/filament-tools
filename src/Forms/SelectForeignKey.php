@@ -10,7 +10,7 @@ class SelectForeignKey
   public static function make($name, $model, $form, $linkForm)
   {
     return Select::make($name)
-      ->required()
+      // ->required()
       ->searchable()
       ->options($model::all()->sortBy('name')->pluck('name', 'id'))
       ->suffix(fn() => FormHelper::LinkReferencedItem($form, $name, $linkForm));
