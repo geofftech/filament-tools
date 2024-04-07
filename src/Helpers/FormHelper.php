@@ -4,7 +4,7 @@ namespace GeoffTech\FilamentTools\Helpers;
 
 use Filament\Forms\Components\Actions\Action;
 
-class FilamentFormHelper
+class FormHelper
 {
 
   /** 
@@ -13,7 +13,7 @@ class FilamentFormHelper
    * - added a link to the records edit form after the select component
    * 
    * usage:
-   *   ->suffix(fn() => FilamentFormHelper::LinkReferencedItem($form, 'plan_id', EditPlan::class)),
+   *   ->suffix(fn() => FormHelper::LinkReferencedItem($form, 'plan_id', EditPlan::class)),
    * 
    */
 
