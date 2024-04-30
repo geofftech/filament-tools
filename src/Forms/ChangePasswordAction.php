@@ -6,9 +6,10 @@ use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
+use Filament\Support\Enums\MaxWidth;
 use Illuminate\Support\Facades\Auth;
 
-class ChangePasswordAction extends Action
+class ChangePasswordAction
 {
 
   public static function make(?string $name = 'Change password'): Action
@@ -16,6 +17,7 @@ class ChangePasswordAction extends Action
     return Action::make($name)
       ->label('Change password')
       ->icon('heroicon-o-lock-closed')
+      ->modalWidth(MaxWidth::Medium)
       ->form([
 
         TextInput::make('password')
@@ -37,17 +39,21 @@ class ChangePasswordAction extends Action
 
         $user = Auth::user();
 
-        if (!$user)
+        if (!$user) {
           return;
+        }
 
-        $user->password = $data['password'];
-        $user->save();
+        $user->update([
+          'password' => $data['password'],
+        ]);
 
         if (request()->hasSession()) {
           request()
             ->session()
             ->put(['password_hash_' . Filament::getAuthGuard() => $data['password']]);
         }
+
+        Auth::login($user);
 
       })
       ->after(function () {

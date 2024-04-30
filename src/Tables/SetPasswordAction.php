@@ -4,6 +4,7 @@ namespace GeoffTech\FilamentTools\Tables;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
+use Filament\Support\Enums\MaxWidth;
 use Filament\Tables\Actions\Action;
 
 class SetPasswordAction
@@ -14,6 +15,7 @@ class SetPasswordAction
     return Action::make('Set password')
       ->label('Set password')
       ->icon('heroicon-o-lock-closed')
+      ->modalWidth(MaxWidth::Medium)
       ->form([
 
         TextInput::make('password')
