@@ -11,9 +11,10 @@ use Illuminate\Support\Facades\Auth;
 class ChangePasswordAction extends Action
 {
 
-  public static function make(?string $name = null): static
+  public static function make(?string $name = 'Change password'): Action
   {
-    return parent::make('Change password')
+    return Action::make($name)
+      ->label('Change password')
       ->icon('heroicon-o-lock-closed')
       ->form([
 

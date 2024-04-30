@@ -1,10 +1,10 @@
 <?php
 
-namespace GeoffTech\FilamentTools\Tables;
+namespace GeoffTech\FilamentTools\Forms;
 
+use Filament\Actions\Action;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
-use Filament\Tables\Actions\Action;
 
 class SetPasswordAction
 {
