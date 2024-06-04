@@ -1,6 +1,6 @@
 <?php
 
-namespace GeoffTech\FilamentTools\Forms;
+namespace GeoffTech\FilamentTools\Actions;
 
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
