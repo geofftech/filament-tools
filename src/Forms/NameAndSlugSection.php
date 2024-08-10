@@ -24,7 +24,7 @@ class NameAndSlugSection
                     )
                     ->live(onBlur: true)
                     ->afterStateUpdated(function (Get $get, Set $set, ?string $state, $context) {
-                        if ($context === 'edit' && $get('slug') && ! $get('is_slug_automatic')) {
+                        if ($context === 'edit' && $get('slug') && !$get('is_slug_automatic')) {
                             return;
                         }
                         $slug = str($state)->slug()->toString();
