@@ -11,7 +11,7 @@ class LinkSelectAction
         return Action::make($name . '_link')
             ->iconButton()
             ->icon('heroicon-m-arrow-top-right-on-square')
-            ->url(fn($get) => $linkForm::getUrl(['record' => $get($name)]))
-            ->visible(fn($get) => (bool) $get($name));
+            ->url(fn ($get) => $linkForm::getUrl(['record' => $get($name)]))
+            ->visible(fn ($get) => (bool) $get($name));
     }
 }

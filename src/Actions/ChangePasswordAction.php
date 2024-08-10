@@ -49,7 +49,7 @@ class ChangePasswordAction
                 if (request()->hasSession()) {
                     request()
                         ->session()
-                        ->put(['password_hash_'.Filament::getAuthGuard() => $data['password']]);
+                        ->put(['password_hash_' . Filament::getAuthGuard() => $data['password']]);
                 }
 
                 Auth::login($user);
