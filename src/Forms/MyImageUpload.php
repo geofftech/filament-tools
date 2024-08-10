@@ -11,9 +11,6 @@ class MyImageUpload
     {
         return FileUpload::make($name)
             ->directory(function (Model $record) use ($name) {
-
-                dump($record);
-
                 return $record->getTable() . '/' . $name;
             })
             ->image()
