@@ -6,8 +6,13 @@ use Filament\Forms\Components\Select;
 
 class SelectRelation
 {
-    public static function make(string $name, ?string $relation, $linkForm = null, $titleAttribute = 'name'): Select
-    {
+    public static function make(
+        string $name,
+        ?string $relation,
+        $linkForm = null,
+        $titleAttribute = 'name',
+        $modifyQueryUsing = null
+    ): Select {
         if (!$relation) {
             // remove '_id' and convert to camel case - business_unit_id -> businessUnit
             $relation = str(substr($name, 0, -3))->camel();
@@ -16,7 +21,11 @@ class SelectRelation
         $select = Select::make($name)
             ->searchable()
             ->live()
-            ->relationship($relation, $titleAttribute)
+            ->relationship(
+                name: $relation,
+                titleAttribute: $titleAttribute,
+                modifyQueryUsing: $modifyQueryUsing,
+            )
             ->preload();
 
         if ($linkForm) {
