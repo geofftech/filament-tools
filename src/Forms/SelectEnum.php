@@ -31,7 +31,7 @@ class SelectEnum extends Select
                         ? $case->getColor()
                         : null;
 
-                    $html = view('select-enum', [
+                    $html = view('filament-tools::select-enum', [
                         'text' => $text,
                         'icon' => $icon,
                         'color' => $color,
