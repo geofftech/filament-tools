@@ -2,6 +2,7 @@
 
 namespace GeoffTech\FilamentTools\Forms;
 
+use Closure;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;

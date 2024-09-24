@@ -31,10 +31,9 @@ class SetPasswordAction
 
             ])
             ->action(function (array $data, $record): void {
-
                 $record->password = $data['password'];
-                $record->save();
 
+                $record->save();
             })
             ->after(function () {
 
@@ -42,7 +41,6 @@ class SetPasswordAction
                     ->title('Password successfully changed')
                     ->success()
                     ->send();
-
             });
     }
 }
