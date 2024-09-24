@@ -5,7 +5,7 @@ namespace GeoffTech\FilamentTools\Forms;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Model;
 
-class MyImageUpload
+class ImageUpload
 {
     public static function make(string $name): FileUpload
     {

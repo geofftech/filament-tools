@@ -4,7 +4,7 @@ namespace GeoffTech\FilamentTools\Tables;
 
 use Filament\Tables\Columns\IconColumn;
 
-class MyBooleanColumn
+class BooleanColumn
 {
     public static function make(string $name): IconColumn
     {

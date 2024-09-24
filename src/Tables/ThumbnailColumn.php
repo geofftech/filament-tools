@@ -4,7 +4,7 @@ namespace GeoffTech\FilamentTools\Tables;
 
 use Filament\Tables\Columns\ImageColumn;
 
-class MyImageColumn
+class ThumbnailColumn
 {
     public static function make(string $name)
     {

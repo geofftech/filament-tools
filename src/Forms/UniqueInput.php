@@ -4,7 +4,7 @@ namespace GeoffTech\FilamentTools\Forms;
 
 use Filament\Forms\Components\TextInput;
 
-class MyUniqueInput
+class UniqueInput
 {
     public static function make(string $name): TextInput
     {
