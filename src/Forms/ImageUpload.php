@@ -14,6 +14,7 @@ class ImageUpload
                 return $record->getTable() . '/' . $name;
             })
             ->image()
-            ->imageEditor();
+            ->imageEditor()
+            ->downloadable();
     }
 }
