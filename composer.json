@@ -1,10 +1,13 @@
 {
   "name": "geofftech/filament-tools",
   "type": "library",
-  "require": {
-    "filament/filament": "^3.2"
-  },
   "license": "MIT",
+  "require": {
+    "filament/filament": "^3.3"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.22"
+  },
   "autoload": {
     "psr-4": {
       "GeoffTech\\FilamentTools\\": "src/"
@@ -19,9 +22,6 @@
       "email": "geoff@geofftech.com"
     }
   ],
-  "require-dev": {
-    "laravel/pint": "^1.18"
-  },
   "extra": {
     "laravel": {
       "providers": [
