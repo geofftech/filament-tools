@@ -11,7 +11,7 @@ use Filament\Forms\Set;
 
 class NameAndSlugSection
 {
-    public static function make(?Closure $modifyRuleUsing = null)
+    public static function make(?Closure $modifyRuleUsing = null): Section
     {
         return Section::make()
             ->schema([

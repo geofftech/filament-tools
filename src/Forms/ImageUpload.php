@@ -5,13 +5,13 @@ namespace GeoffTech\FilamentTools\Forms;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Model;
 
-class ImageUpload
+class ImageUpload extends FileUpload
 {
-    public static function make(string $name): FileUpload
+    public function setUp(): void
     {
-        return FileUpload::make($name)
-            ->directory(function (Model $record) use ($name) {
-                return $record->getTable() . '/' . $name;
+        $this
+            ->directory(function (Model $record) {
+                return $record->getTable() . '/' . $this->name;
             })
             ->image()
             ->imageEditor()

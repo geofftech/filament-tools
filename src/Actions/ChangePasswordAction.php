@@ -53,7 +53,6 @@ class ChangePasswordAction
                 }
 
                 Auth::login($user);
-
             })
             ->after(function () {
 
@@ -61,7 +60,6 @@ class ChangePasswordAction
                     ->title('Password successfully changed')
                     ->success()
                     ->send();
-
             });
     }
 }

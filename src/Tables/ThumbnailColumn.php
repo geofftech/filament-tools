@@ -4,11 +4,11 @@ namespace GeoffTech\FilamentTools\Tables;
 
 use Filament\Tables\Columns\ImageColumn;
 
-class ThumbnailColumn
+class ThumbnailColumn extends ImageColumn
 {
-    public static function make(string $name)
+    public function setUp(): void
     {
-        return ImageColumn::make($name)
+        $this
             ->label('')
             ->alignCenter()
             ->extraHeaderAttributes(['class' => 'w-0'])

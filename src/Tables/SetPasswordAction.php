@@ -7,11 +7,11 @@ use Filament\Notifications\Notification;
 use Filament\Support\Enums\MaxWidth;
 use Filament\Tables\Actions\Action;
 
-class SetPasswordAction
+class SetPasswordAction extends Action
 {
-    public static function make(): Action
+    public function setUp(): void
     {
-        return Action::make('Set password')
+        $this
             ->label('Set password')
             ->icon('heroicon-o-lock-closed')
             ->modalWidth(MaxWidth::Medium)

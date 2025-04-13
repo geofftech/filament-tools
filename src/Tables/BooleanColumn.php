@@ -4,11 +4,11 @@ namespace GeoffTech\FilamentTools\Tables;
 
 use Filament\Tables\Columns\IconColumn;
 
-class BooleanColumn
+class BooleanColumn extends IconColumn
 {
-    public static function make(string $name): IconColumn
+    public function setUp(): void
     {
-        return IconColumn::make($name)
+        $this
             ->boolean()
             ->label('')
             ->alignCenter()

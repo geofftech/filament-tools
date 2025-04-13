@@ -4,11 +4,11 @@ namespace GeoffTech\FilamentTools\Forms;
 
 use Filament\Forms\Components\TextInput;
 
-class UniqueInput
+class UniqueInput extends TextInput
 {
-    public static function make(string $name): TextInput
+    public function setUp(): void
     {
-        return TextInput::make($name)
+        $this
             ->required()
             ->maxLength(255)
             ->unique(ignoreRecord: true);
