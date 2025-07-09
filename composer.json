@@ -3,7 +3,7 @@
   "type": "library",
   "license": "MIT",
   "require": {
-    "filament/filament": "^3.3"
+    "filament/filament": "^4"
   },
   "require-dev": {
     "laravel/pint": "^1.22"
