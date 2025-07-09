@@ -28,5 +28,6 @@
         "GeoffTech\\FilamentTools\\ServiceProvider"
       ]
     }
-  }
+  },
+  "minimum-stability": "beta"
 }
