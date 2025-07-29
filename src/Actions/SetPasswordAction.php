@@ -5,7 +5,7 @@ namespace GeoffTech\FilamentTools\Actions;
 use Filament\Actions\Action;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
-use Filament\Support\Enums\MaxWidth;
+use Filament\Support\Enums\Width;
 
 class SetPasswordAction
 {
@@ -14,8 +14,8 @@ class SetPasswordAction
         return Action::make('Set password')
             ->label('Set password')
             ->icon('heroicon-o-lock-closed')
-            ->modalWidth(MaxWidth::Medium)
-            ->form([
+            ->modalWidth(Width::Medium)
+            ->schema([
 
                 TextInput::make('password')
                     ->required()
@@ -34,7 +34,6 @@ class SetPasswordAction
 
                 $record->password = $data['password'];
                 $record->save();
-
             })
             ->after(function () {
 
@@ -42,7 +41,6 @@ class SetPasswordAction
                     ->title('Password successfully changed')
                     ->success()
                     ->send();
-
             });
     }
 }

@@ -6,7 +6,8 @@ use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
-use Filament\Support\Enums\MaxWidth;
+use Filament\Support\Enums\Width;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
 class ChangePasswordAction
@@ -16,8 +17,8 @@ class ChangePasswordAction
         return Action::make($name)
             ->label('Change password')
             ->icon('heroicon-o-lock-closed')
-            ->modalWidth(MaxWidth::Medium)
-            ->form([
+            ->modalWidth(Width::Medium)
+            ->schema([
 
                 TextInput::make('password')
                     ->required()
@@ -36,6 +37,7 @@ class ChangePasswordAction
             ])
             ->action(function (array $data): void {
 
+                /** @var Model $user */
                 $user = Auth::user();
 
                 if (!$user) {

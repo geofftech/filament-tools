@@ -1,8 +1,8 @@
 <?php
 
-namespace GeoffTech\FilamentTools\Forms;
+namespace GeoffTech\FilamentTools\Actions;
 
-use Filament\Forms\Components\Actions\Action;
+use Filament\Actions\Action;
 
 class LinkSelectAction
 {
