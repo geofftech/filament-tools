@@ -8,6 +8,8 @@ class BooleanColumn extends IconColumn
 {
     public function setUp(): void
     {
+        parent::setUp();
+
         $this
             ->boolean()
             ->label('')

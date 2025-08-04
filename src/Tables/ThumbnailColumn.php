@@ -8,6 +8,8 @@ class ThumbnailColumn extends ImageColumn
 {
     public function setUp(): void
     {
+        parent::setUp();
+
         $this
             ->label('')
             ->alignCenter()
